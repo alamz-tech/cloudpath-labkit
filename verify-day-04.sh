@@ -4,9 +4,13 @@
 # Usage:  bash verify-day-04.sh <CODE>
 #
 # This PARSES the policy as JSON (via python3) rather than grepping for text,
-# so a valid-but-unusually-formatted policy passes and a malformed one fails
-# honestly. It is a teaching check, not a full IAM validator: it inspects
-# Effect/Action only, and does not evaluate AWS's real policy semantics.
+# so a valid-but-unusually-formatted policy passes and a malformed one fails.
+#
+# Scope: this is the FAST LOCAL check — structure and wildcards only. The full
+# IAM linter (grammar, action format, ARN shape, security findings) runs
+# server-side in app/grading/iam.py and grades the same policy when it lands in
+# the learner's repo on day 5. Validation you can't trust or update shouldn't
+# live on the learner's machine. See docs/AWS_INTEGRATION.md.
 
 set -euo pipefail
 
