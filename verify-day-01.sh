@@ -24,8 +24,10 @@ c0=0; c1=0; c2=0
 # check 0: file exists
 [ -f "$FILE" ] && c0=1
 
-# check 1: file contains the kernel name (Linux)
-if [ "$c0" -eq 1 ] && grep -q "Linux" "$FILE"; then c1=1; fi
+# check 1: file contains a system name. Accept ANY plausible `uname -s`
+# output, not just "Linux" — learners on their own Mac get "Darwin", and
+# hardcoding "Linux" would fail them through no fault of their own.
+if [ "$c0" -eq 1 ] && grep -Eqi '^[[:space:]]*(linux|darwin|freebsd|openbsd|netbsd|sunos|aix)' "$FILE"; then c1=1; fi
 
 # check 2: permissions are 600 (owner-only) — least privilege
 if [ "$c0" -eq 1 ]; then
