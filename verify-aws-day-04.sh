@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# CloudPath — day-04 verification (IAM least-privilege policy).
+# CloudPath — aws-day-04 verification (IAM least-privilege policy).
 #
-# Usage:  bash verify-day-04.sh <CODE>
+# Usage:  bash verify-aws-day-04.sh <CODE>
 #
 # This PARSES the policy as JSON (via python3) rather than grepping for text,
 # so a valid-but-unusually-formatted policy passes and a malformed one fails.
@@ -14,9 +14,9 @@
 
 set -euo pipefail
 
-NONCE="${1:?Paste your day-4 code like:  bash verify-day-04.sh ABC234}"
-LAB_ID="day-04"
-SECRET="463aec013a1104e84f28fa7c534c3df0d13e48a86c770493cb66004bbb6e2de2"   # server injects GRADING_HMAC_SECRET
+NONCE="${1:?Paste your day-4 code like:  bash verify-aws-day-04.sh ABC234}"
+LAB_ID="aws-day-04"
+SECRET="__injected_by_deploy__"   # server injects GRADING_HMAC_SECRET
 FILE="$HOME/cloudpath/policy.json"
 
 if ! command -v python3 >/dev/null 2>&1; then

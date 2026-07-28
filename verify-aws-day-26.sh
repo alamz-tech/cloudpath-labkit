@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# CloudPath — day-26 verification.
-# Usage:  bash verify-day-26.sh <CODE>
+# CloudPath — aws-day-26 verification.
+# Usage:  bash verify-aws-day-26.sh <CODE>
 set -euo pipefail
-NONCE="${1:?Paste your code like:  bash verify-day-26.sh ABC234}"
-LAB_ID="day-26"
-SECRET="463aec013a1104e84f28fa7c534c3df0d13e48a86c770493cb66004bbb6e2de2"   # server injects GRADING_HMAC_SECRET
+NONCE="${1:?Paste your code like:  bash verify-aws-day-26.sh ABC234}"
+LAB_ID="aws-day-26"
+SECRET="__injected_by_deploy__"   # server injects GRADING_HMAC_SECRET
 FILE="$HOME/cloudpath/budget.json"
 c0=0; c1=0; c2=0; c3=0; c4=0
 [ -f "$FILE" ] && c0=1

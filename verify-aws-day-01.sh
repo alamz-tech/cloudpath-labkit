@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# CloudPath — day-01 verification script.
+# CloudPath — aws-day-01 verification script.
 #
-# Usage:  bash verify-day-01.sh <CODE>
+# Usage:  bash verify-aws-day-01.sh <CODE>
 # where <CODE> is the one-time code the coach sent you.
 #
 # It inspects real state in your lab environment, then prints a result token
@@ -13,9 +13,9 @@
 
 set -euo pipefail
 
-NONCE="${1:?Paste your day-1 code like:  bash verify-day-01.sh ABC234}"
-LAB_ID="day-01"
-SECRET="463aec013a1104e84f28fa7c534c3df0d13e48a86c770493cb66004bbb6e2de2"   # server sets this to GRADING_HMAC_SECRET
+NONCE="${1:?Paste your day-1 code like:  bash verify-aws-day-01.sh ABC234}"
+LAB_ID="aws-day-01"
+SECRET="__injected_by_deploy__"   # server sets this to GRADING_HMAC_SECRET
 FILE="$HOME/cloudpath/day1.txt"
 
 # --- checks (order MUST match checks[] in day-01.yaml) ---

@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
-# CloudPath — day-03 verification (core AWS services cheat sheet).
+# CloudPath — aws-day-03 verification (core AWS services cheat sheet).
 #
-# Usage:  bash verify-day-03.sh <CODE>
+# Usage:  bash verify-aws-day-03.sh <CODE>
 # Checks ~/cloudpath/services.txt maps each of the four jobs to a real service.
 
 set -euo pipefail
 
-NONCE="${1:?Paste your day-3 code like:  bash verify-day-03.sh ABC234}"
-LAB_ID="day-03"
-SECRET="463aec013a1104e84f28fa7c534c3df0d13e48a86c770493cb66004bbb6e2de2"   # server injects GRADING_HMAC_SECRET
+NONCE="${1:?Paste your day-3 code like:  bash verify-aws-day-03.sh ABC234}"
+LAB_ID="aws-day-03"
+SECRET="__injected_by_deploy__"   # server injects GRADING_HMAC_SECRET
 FILE="$HOME/cloudpath/services.txt"
 
 # --- checks (order MUST match checks[] in day-03.yaml) ---
