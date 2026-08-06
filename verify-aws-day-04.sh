@@ -16,7 +16,7 @@ set -euo pipefail
 
 NONCE="${1:?Paste your day-4 code like:  bash verify-aws-day-04.sh ABC234}"
 LAB_ID="aws-day-04"
-SECRET="__injected_by_deploy__"   # server injects GRADING_HMAC_SECRET
+SECRET="9f4381e664d6b7a7a758bb9cc1614ed7e64c65df23a75076ed79bf26544b12a6"   # server injects GRADING_HMAC_SECRET
 FILE="$HOME/cloudpath/policy.json"
 
 if ! command -v python3 >/dev/null 2>&1; then

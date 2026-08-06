@@ -15,7 +15,7 @@ set -euo pipefail
 
 NONCE="${1:?Paste your lesson-1 code like:  bash verify-gcp-day-01.sh ABC234}"
 LAB_ID="gcp-day-01"
-SECRET="__injected_by_deploy__"   # server sets this to GRADING_HMAC_SECRET
+SECRET="9f4381e664d6b7a7a758bb9cc1614ed7e64c65df23a75076ed79bf26544b12a6"   # server sets this to GRADING_HMAC_SECRET
 FILE="$HOME/cloudpath/lesson1.txt"
 
 # --- checks (order MUST match checks[] in day-01.yaml) ---

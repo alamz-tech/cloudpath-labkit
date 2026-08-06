@@ -10,7 +10,7 @@ set -euo pipefail
 
 NONCE="${1:?Paste your lesson-3 code like:  bash verify-gcp-day-03.sh ABC234}"
 LAB_ID="gcp-day-03"
-SECRET="__injected_by_deploy__"   # server sets this to GRADING_HMAC_SECRET
+SECRET="9f4381e664d6b7a7a758bb9cc1614ed7e64c65df23a75076ed79bf26544b12a6"   # server sets this to GRADING_HMAC_SECRET
 PROJ="$HOME/cloudpath/lesson3-project.txt"
 NUM="$HOME/cloudpath/lesson3-number.txt"
 

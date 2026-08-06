@@ -4,7 +4,7 @@
 set -euo pipefail
 NONCE="${1:?Paste your code like:  bash verify-aws-day-24.sh ABC234}"
 LAB_ID="aws-day-24"
-SECRET="__injected_by_deploy__"   # server injects GRADING_HMAC_SECRET
+SECRET="9f4381e664d6b7a7a758bb9cc1614ed7e64c65df23a75076ed79bf26544b12a6"   # server injects GRADING_HMAC_SECRET
 FILE="$HOME/cloudpath/alarm.json"
 c0=0; c1=0; c2=0; c3=0; c4=0
 [ -f "$FILE" ] && c0=1
